@@ -8,15 +8,17 @@ import SignUp from './components/SignUp';
 import {Router,Switch,Route} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
+const browserHistory = createBrowserHistory();
+
 firebaseApp.auth().onAuthStateChanged(user =>{
     if (user) {
-      console.log('user is signed in or up',user);
+      browserHistory.push('/app');
     } else {
-      console.log('user still needs to sign in',user);
+      browserHistory.replace('/signin');
     }
 })
 
-const browserHistory = createBrowserHistory();
+
 
 const app = (
     <Router path="/" history={browserHistory}>
