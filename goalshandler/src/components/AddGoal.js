@@ -12,7 +12,7 @@ constructor(props){
 
     addGoal(){
           console.log(this.state);
-          goalRef.push({email:this.props.email,title:this.state.title});
+          goalRef.push({email:this.props.user,title:this.state.title});
     }
 
     render() {
@@ -35,9 +35,9 @@ constructor(props){
 }
 
 function mapStateToProps(state){
-    const {email} = state;
+    const {user} = state;
     return{
-        email
+        user
     }
 }
 
