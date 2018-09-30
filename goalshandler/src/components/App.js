@@ -4,6 +4,8 @@ import AddGoal from './AddGoal';
 import GoalList from './GoalList';
 import {firebaseApp} from '../firebase';
 import {connect} from 'react-redux';
+import CompletedGoalList from './CompletedGoalList';
+
 class App extends Component {
 
   signOut(){
@@ -18,6 +20,9 @@ class App extends Component {
         <hr/>
         <h4>Goals</h4>
         <GoalList />
+        <hr />
+        <h4>Completed Goals</h4>
+        <CompletedGoalList />
         <hr />
         <button
         style={{marginTop:'5px'}}

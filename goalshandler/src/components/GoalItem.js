@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import { completeGoalRef, goalRef } from '../firebase';
 
 class GoalItem extends Component {
+   constructor(props){
+     super(props);
+   }
+
   completeGoal() {
     // add to complete goals on the database
     // remove this goal from the goals reference

@@ -1,12 +1,14 @@
 import * as firebase from 'firebase';
 
 const config = {
-    apiKey: "{your api key}",
-    authDomain: "{your auth domain}",
-    databaseURL: "{your database url}",
-    projectId: "projectId",
-    storageBucket: "{your storage bucket}",
-    messagingSenderId: "{your id}"
+    apiKey: "AIzaSyBWhmjkqDTqtq-KC6Oz030OHZtAqXuJpxk",
+    authDomain: "goalshandler.firebaseapp.com",
+    databaseURL: "https://goalshandler.firebaseio.com",
+    projectId: "goalshandler",
+    storageBucket: "goalshandler.appspot.com",
+    messagingSenderId: "900369985819"
   };
 
  export const firebaseApp = firebase.initializeApp(config);
+ export const goalRef = firebase.database().ref('goals');
+ export const completeGoalRef = firebase.database().ref('completeGoals');

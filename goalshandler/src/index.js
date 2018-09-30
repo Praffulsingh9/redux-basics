@@ -22,7 +22,7 @@ firebaseApp.auth().onAuthStateChanged(user =>{
         browserHistory.replace('/signin');
     }
 })
-
+const browserHistory = createBrowserHistory();
 const store = createStore(reducer);
 
 
